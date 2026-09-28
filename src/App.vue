@@ -34,6 +34,7 @@ function showModal() {
   }
   if (count === 0 ) {
     visible.value = false
+    return
   }
   visible.value = !visible.value
 }
