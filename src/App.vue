@@ -141,7 +141,6 @@ function stopDrag(): void {
   .news-bubble--wrapper {
     position: fixed;
     touch-action: none;
-    cursor: grab;
   }
 
   .news-menu {
@@ -149,10 +148,10 @@ function stopDrag(): void {
     right: -6px;
     background-color: #292929;
     color: white;
-    list-style: none;
     top: 0;
     transform: translateX(100%);
     width: 260px;
+    padding: 32px 20px 20px;
   }
 
   li > a {
@@ -160,34 +159,44 @@ function stopDrag(): void {
     padding: 0;
   }
 
-  ul {
-    padding: 20px;
+  .news-menu ul {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  ul li {
+    background-color: #3a3a3a;
   }
 
   ul li:not(:last-child) {
     margin-bottom: 10px;
-    border-bottom: 1px solid white;
-    padding-bottom: 10px;
   }
 
-  li a:focus, li a:hover {
+  li a:active, li a:hover {
     background-color: blue;
   }
 
-  button {
+  .news-bubble {
     border-radius: 50%;
     background-color: #292929;
     color: white;
     padding: 5px;
     font-size: 18px;
-    text-align: cener;
+    text-align: center;
     width: 50px;
     height: 50px;
     font-weight: 700;
   }
 
-  button:focus {
+  .news-bubble:focus {
     outline-color: blue;
     border: 5px solid #7f7fec;
   }
+
+  .close-button {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
 </style>
