@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, onUpdated, ref } from 'vue';
+import { onMounted, onUnmounted, ref } from 'vue';
 
 interface NewsItem {
   id: number
   title: string
   link: string
 }
-const breakingNews = [
+const breakingNews: NewsItem[] = [
   {
     id: 1,
     title: "Ducks sighted!",
