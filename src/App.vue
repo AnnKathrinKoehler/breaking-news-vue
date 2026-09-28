@@ -120,12 +120,19 @@ function stopDrag(): void {
   >
     {{ count }}
   </button>
+  <nav v-if="visible" class="news-menu" aria-label="News-Menü">
+    <button
+      aria-label="Menü schließen"
+      class="close-button"
+      @click="showModal"
+    >Close</button>
+    <ul>
+      <li v-for="item in breakingNews" :key="item.id">
+        <a :href="item.link" target="_blank">{{ item.title }}</a>
+      </li>
+    </ul>
+  </nav>
 
-  <ul v-if="visible" class="news-menu" aria-label="News-Menü">
-    <li v-for="item in breakingNews" :key="item.id">
-      <a :href="item.link" target="_blank">{{ item.title }}</a>
-    </li>
-  </ul>
 </div>
 </template>
 
