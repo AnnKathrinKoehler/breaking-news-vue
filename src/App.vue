@@ -138,6 +138,12 @@ function stopDrag(): void {
 </template>
 
 <style>
+  :root {
+    --color-purple: #7f7fec;
+    --color-black: #292929;
+    --color-gray: #3a3a3a;
+  }
+
   .news-bubble--wrapper {
     position: fixed;
     touch-action: none;
@@ -146,7 +152,7 @@ function stopDrag(): void {
   .news-menu {
     position: absolute;
     right: -6px;
-    background-color: #292929;
+    background-color: var(--color-black);
     color: white;
     top: 0;
     transform: translateX(100%);
@@ -165,20 +171,20 @@ function stopDrag(): void {
   }
 
   ul li {
-    background-color: #3a3a3a;
+    background-color: var(--color-gray);
   }
 
   ul li:not(:last-child) {
     margin-bottom: 10px;
   }
 
-  li a:active, li a:hover {
-    background-color: blue;
+  li:active, li:hover {
+    background-color: var(--color-purple);
   }
 
   .news-bubble {
     border-radius: 50%;
-    background-color: #292929;
+    background-color: var(--color-black);
     color: white;
     padding: 5px;
     font-size: 18px;
@@ -190,13 +196,17 @@ function stopDrag(): void {
 
   .news-bubble:focus {
     outline-color: blue;
-    border: 5px solid #7f7fec;
+    border: 5px solid var(--color-purple);
   }
 
   .close-button {
     position: absolute;
     right: 0;
     top: 0;
+    background-color: var(--color-gray);
+    color: white;
+    border: 1px solid white;
+    border-radius: 3px;
   }
 
 </style>
