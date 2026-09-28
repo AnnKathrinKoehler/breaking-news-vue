@@ -107,8 +107,11 @@ function stopDrag(): void {
   :style="{ left: `${x}px`, top: `${y}px` }"
 >
   <button
-    type="button"
     aria-label="Öffne News-Menü oder ziehe den Button zum Verschieben"
+    class="news-bubble"
+    :aria-expanded="visible ? 'true' : 'false'"
+    :disabled="count === 0"
+    :style="{ cursor: isDragging ? 'grabbing' : 'pointer' }"
     @click="showModal"
     @pointerdown="startDrag"
     @pointermove="moveBubble"
